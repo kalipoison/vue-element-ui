@@ -6,7 +6,8 @@
         text-color="#fff"
         active-text-color="#ffd04b"
     >
-        <h3>通用后台管理系统</h3>
+        <h3 v-show="!isCollapse">通用后台管理系统</h3>
+        <h3 v-show="isCollapse">后台</h3>
         <el-menu-item 
             :index="item.path" 
             v-for="item in noChildren" 
@@ -62,7 +63,6 @@
   export default {
     data() {
       return {
-        isCollapse: false,
         menu: [
             {
                 path: "/",

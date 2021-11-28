@@ -2,7 +2,9 @@
   <el-container>
     <el-aside width="auto"><CommonAside></CommonAside></el-aside>
     <el-container >
-      <el-header>Header</el-header>
+      <el-header>
+        <Common-header></Common-header>
+      </el-header>
       <el-main>Main</el-main>
     </el-container>
   </el-container>
@@ -10,9 +12,10 @@
 
 <script>
 import CommonAside from '../components/CommonAside.vue';
+import CommonHeader from '../components/CommonHeader.vue';
 export default {
   name: 'Main',
-  components: { CommonAside }
+  components: { CommonAside, CommonHeader }
 }
 </script>
 
