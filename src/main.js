@@ -5,7 +5,8 @@ import store from './store/index'
 import './registerServiceWorker'
 import { Button, Select, Radio, Header, Container, Main,
   Aside, Menu, MenuItem, Submenu, MenuItemGroup, 
-  Dropdown, DropdownItem, DropdownMenu} from 'element-ui';
+  Dropdown, DropdownItem, DropdownMenu, Row, Col, Card,
+  Table, TableColumn} from 'element-ui';
 // import ElementUI from 'element-ui';
 // import 'element-ui/lib/theme-chalk/index.css';
 
@@ -26,6 +27,11 @@ Vue.use(Submenu);
 Vue.use(Dropdown);
 Vue.use(DropdownItem);
 Vue.use(DropdownMenu);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Card);
+Vue.use(Table);
+Vue.use(TableColumn);
 
 
 Vue.config.productionTip = false
