@@ -22,3 +22,6 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Element-UI 参考网址: https://element.eleme.cn/#/zh-CN/component/layout
+Vue 使用axios 参考网址： http://www.axios-js.com/zh-cn/docs/

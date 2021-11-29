@@ -54,6 +54,9 @@
 </template>
 
 <script>
+
+import {getMenu} from '../../api/data'
+
 export default {
     data() {
         return {
@@ -127,7 +130,12 @@ export default {
                 color: "#5ab1ef",
             }],
         }
-    }
+    },
+    mounted() {
+        getMenu().then((res) => {
+            console.log("res",res);
+        })
+    },
 }
 </script>
 

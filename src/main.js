@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import store from './store/index'
+import http from 'axios'
 import './registerServiceWorker'
 import { Button, Select, Radio, Header, Container, Main,
   Aside, Menu, MenuItem, Submenu, MenuItemGroup, 
@@ -32,6 +33,7 @@ Vue.use(Col);
 Vue.use(Card);
 Vue.use(Table);
 Vue.use(TableColumn);
+Vue.prototype.$http = http
 
 
 Vue.config.productionTip = false
