@@ -15,7 +15,7 @@ class HttpRequst {
 
       }
     }
-    return config
+    return config;
   }
   interceptors (instance) {
     instance.interceptors.request.use(function (config) {
@@ -28,7 +28,7 @@ class HttpRequst {
     });
 
     instance.interceptors.response.use(function (response) {
-      console.log('处理相应');
+      console.log('处理响应');
       // 对响应数据做点什么
       return response.data;
     }, function (error) {

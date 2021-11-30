@@ -35,6 +35,7 @@ Vue.use(Table);
 Vue.use(TableColumn);
 Vue.prototype.$http = http
 
+if (process.env.NODE_ENV === 'development') require('@/api/mock')
 
 Vue.config.productionTip = false
 

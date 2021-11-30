@@ -6,3 +6,10 @@ export const getMenu = () => {
     method: 'get'
   })
 }
+
+export const getHome = () => {
+  return axios.request({
+    url: '/home/getData',
+    method: 'get'
+  })
+}

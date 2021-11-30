@@ -55,7 +55,7 @@
 
 <script>
 
-import {getMenu} from '../../api/data'
+import { getHome } from '../../api/data'
 
 export default {
     data() {
@@ -131,10 +131,15 @@ export default {
             }],
         }
     },
+    methods : {
+        getTableData () {
+            getHome().then((res) => {
+                console.info("res", res.data);
+            });
+        },
+    },
     mounted() {
-        getMenu().then((res) => {
-            console.log("res",res);
-        })
+        this.getTableData();
     },
 }
 </script>
