@@ -45,14 +45,24 @@
                 </el-card>
             </div>
             <el-card shadow="hover" style="height: 280px">
-                <div style="height: 280px; width: 100%" ref="OrderEchart"></div>
+                <echart 
+                    :chartData="echartData.order" 
+                    style="height: 280px; width : 100%"
+                ></echart>
             </el-card>
             <div class="graph">
                 <el-card shadow="hover" style="height: 280px">
-                    <div style="height: 280px; width: 100%" ref="UserEchart"></div>
+                    <echart 
+                        :chartData="echartData.user"
+                        style="height: 280px; width: 100%"
+                    ></echart>
                 </el-card>
                 <el-card shadow="hover" style="height: 280px">
-                    <div style="height: 280px; width: 100%" ref="VideoEchart"></div>
+                    <echart 
+                        :chartData="echartData.video"
+                        :isAxisChart="false"
+                        style="height: 280px; width: 100%"
+                    ></echart>
                 </el-card>
             </div>
         </el-col>
@@ -62,9 +72,11 @@
 <script>
 
 import { getHome } from '../../api/data';
-import * as echarts from 'echarts';
-
+import Echart from "@/components/ECharts.vue";
 export default {
+    components: {
+        Echart,
+    },
     data() {
         return {
             userImg : require('../../assets/images/user.png'),
@@ -233,6 +245,19 @@ export default {
                     series: [],
                 },
             },
+            echartData : {
+                order: {
+                    xData: [],
+                    series: [],
+                },
+                user: {
+                    xData: [],
+                    series: [],
+                },
+                video: {
+                    series: [],
+                },
+            },
         }
     },
     methods : {
@@ -240,23 +265,21 @@ export default {
             getHome().then((res) => {
                 console.info("res", res.data);
 
-                // 折线图的展示
+                // 传给组件的值
                 const order = res.data.orderData;
-                this.echartsData.xAxis = order;
+                this.echartData.order.xData = order.date;
                 let keyArray = Object.keys(order.data[0]);
                 keyArray.forEach((key)=>{
-                    this.echartsData.order.series.push({
+                    this.echartData.order.series.push({
                         name : key,
                         data : order.data.map((item) => item[key]),
                         type : 'line',
                     });
                 });
-                const myEchartsOrder = echarts.init(this.$refs.OrderEchart);
-                myEchartsOrder.setOption(this.echartsData.order);
 
                 // 柱状图的展示
-                this.echartsData.user.xAxis.data = res.data.userData.map((item) => item.date);
-                this.echartsData.user.series.push({
+                this.echartData.user.xData = res.data.userData.map((item) => item.date);
+                this.echartData.user.series.push({
                     name : '新增用户',
                     data : res.data.userData.map((item) => item.new),
                     type : 'bar',
@@ -266,16 +289,12 @@ export default {
                     data : res.data.userData.map((item) => item.active),
                     type : 'bar',
                 });
-                const myEchartsUser = echarts.init(this.$refs.UserEchart);
-                myEchartsUser.setOption(this.echartsData.user);
 
                 // 饼状图的展示
-                this.echartsData.video.series.push({
+                this.echartData.video.series.push({
                     data : res.data.videoData,
                     type : 'pie',
                 });
-                const myEchartsVideo = echarts.init(this.$refs.VideoEchart);
-                myEchartsVideo.setOption(this.echartsData.video);
             });
         },
     },
