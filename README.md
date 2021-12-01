@@ -37,7 +37,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # 效果展示
 
-![image-20211201230219404](https://github.com/kalipoison/vue-element-ui/blob/master/show/image-20211201230219404.png)
+![image-20211201230219404](show/image-20211201230219404.png)
 
 
 
