@@ -7,7 +7,7 @@ import './registerServiceWorker'
 import { Button, Select, Radio, Header, Container, Main,
   Aside, Menu, MenuItem, Submenu, MenuItemGroup, 
   Dropdown, DropdownItem, DropdownMenu, Row, Col, Card,
-  Table, TableColumn} from 'element-ui';
+  Table, TableColumn, Breadcrumb, BreadcrumbItem} from 'element-ui';
 // import ElementUI from 'element-ui';
 // import 'element-ui/lib/theme-chalk/index.css';
 
@@ -33,6 +33,8 @@ Vue.use(Col);
 Vue.use(Card);
 Vue.use(Table);
 Vue.use(TableColumn);
+Vue.use(Breadcrumb);
+Vue.use(BreadcrumbItem);
 Vue.prototype.$http = http
 
 if (process.env.NODE_ENV === 'development') require('@/api/mock')

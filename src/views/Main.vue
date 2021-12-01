@@ -1,9 +1,9 @@
 <template>
   <el-container>
-    <el-aside width="auto"><CommonAside></CommonAside></el-aside>
+    <el-aside width="auto"><commonAside></commonAside></el-aside>
     <el-container >
       <el-header>
-        <Common-header></Common-header>
+        <common-header></common-header>
       </el-header>
       <el-main><router-view></router-view></el-main>
     </el-container>
