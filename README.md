@@ -37,15 +37,15 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # 效果展示
 
-![image-20211201230219404](C:\Users\zsh\AppData\Roaming\Typora\typora-user-images\image-20211201230219404.png)
+![image-20211201230219404](.\show\image-20211201230219404.png)
 
 
 
-![image-20211201230251656](C:\Users\zsh\AppData\Roaming\Typora\typora-user-images\image-20211201230251656.png)
+![image-20211201230251656](.\show\image-20211201230251656.png)
 
-![image-20211201230320122](C:\Users\zsh\AppData\Roaming\Typora\typora-user-images\image-20211201230320122.png)
+![image-20211201230320122](.\show\image-20211201230320122.png)
 
-![image-20211201230338476](C:\Users\zsh\AppData\Roaming\Typora\typora-user-images\image-20211201230338476.png)
+![image-20211201230338476](.\show\image-20211201230338476.png)
 
 
 
