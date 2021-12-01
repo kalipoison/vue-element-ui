@@ -37,15 +37,15 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # 效果展示
 
-![image-20211201230219404](.\show\image-20211201230219404.png)
+![image-20211201230219404](https://github.com/kalipoison/vue-element-ui/blob/master/show/image-20211201230219404.png)
 
 
 
-![image-20211201230251656](.\show\image-20211201230251656.png)
+![image-20211201230251656](https://github.com/kalipoison/vue-element-ui/blob/master/show/image-20211201230251656.png)
 
-![image-20211201230320122](.\show\image-20211201230320122.png)
+![image-20211201230320122](https://github.com/kalipoison/vue-element-ui/blob/master/show/image-20211201230320122.png)
 
-![image-20211201230338476](.\show\image-20211201230338476.png)
+![image-20211201230338476](https://github.com/kalipoison/vue-element-ui/blob/master/show/image-20211201230338476.png)
 
 
 
